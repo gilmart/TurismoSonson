@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondomenu"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imagenlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/logo2sonson"
+        android:paddingLeft="100sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_gravity="bottom">
+
+
+        <Button
+            android:id="@+id/botonRestaurante"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/cornsilk"
+
+            android:onClick="IrRestaurante"
+
+            android:drawableLeft="@drawable/bandeja"
+            android:text="@string/TextoBotonRestaurante"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:weightSum="1"
+        android:layout_gravity="bottom">
+
+
+        <Button
+            android:id="@+id/botonPosada"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+
+            android:onClick="IrPosada"
+            android:backgroundTint="@color/cornsilk"
+
+            android:text="@string/TextoBotonPosada"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+
+            android:drawableLeft="@drawable/motel" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:weightSum="1"
+        android:layout_gravity="bottom"
+        >
+
+        <Button
+
+            android:id="@+id/botonVisitar"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+
+            android:onClick="IrVisitar"
+            android:backgroundTint="@color/cornsilk"
+
+
+            android:text="@string/TextoBotonVisitar"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+
+            android:drawableLeft="@drawable/visitas" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

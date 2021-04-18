@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo5"
+
+    tools:context=".PaqueteTuristico">
+
+
+        <ImageView
+            android:id="@+id/fotoRestauranteMain"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:padding="1dp"
+            android:src="@drawable/restaurantedrburguer2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nombreRestauranteMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/nombreRestauranteLaCocoa"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:padding="1dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fotoRestauranteMain"/>
+
+        <TextView
+            android:id="@+id/precioRestauranteMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/precioRestauranteDrBurguerMain"
+            android:padding="1dp"
+            android:textSize="15dp"
+            app:layout_constraintTop_toBottomOf="@id/nombreRestauranteMain"
+            app:layout_constraintStart_toEndOf="@id/fotoRestauranteMain"/>
+
+        <TextView
+            android:id="@+id/infRestauranteMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text=""
+            android:padding="1dp"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/precioRestauranteMain"
+            app:layout_constraintStart_toEndOf="@id/fotoRestauranteMain"/>
+
+
+        <TextView
+            android:id="@+id/descripcionRestauranteMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/black"
+            android:text=""
+            android:textSize="15dp"
+            android:layout_marginLeft="20sp"
+
+            app:layout_constraintTop_toBottomOf="@id/infRestauranteMain"
+            app:layout_constraintStart_toEndOf="@id/fotoRestauranteMain"
+            app:layout_constraintBottom_toBottomOf="@id/fotoRestauranteMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/numPersonas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:hint="Ingresa Numero de Personas"
+            android:ems="7"
+
+            app:layout_constraintTop_toBottomOf="@id/descripcionRestauranteMain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTransporte"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+
+            android:orientation="vertical"
+            app:layout_constraintHorizontal_bias="0."
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/numPersonas">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/rbavion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="calcular_transporte"
+                            android:text="Avion"
+                            android:checked="true"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+
+                        <RadioButton
+                            android:id="@+id/rbbus"
+                            android:layout_width="match_parent"
+                            android:layout_height="22dp"
+                            android:onClick="calcular_transporte"
+                            android:text="Bus"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/rbtaxi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="calcular_transporte"
+                            android:text="Taxi"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            />
+                </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCostoTransporte"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+
+            android:orientation="vertical"
+            app:layout_constraintHorizontal_bias="0."
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutTransporte">
+
+                <TextView
+                    android:id="@+id/tvtransporte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutPosada"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+
+            android:orientation="vertical"
+            app:layout_constraintHorizontal_bias="0."
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutTransporte"
+            app:layout_constraintTop_toBottomOf="@id/numPersonas">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/rbElTesoro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="calcular_posada"
+                            android:text="El Tesoro"
+                            android:checked="true"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/rbLaLlamarada"
+                            android:layout_width="match_parent"
+                            android:layout_height="22dp"
+                            android:onClick="calcular_posada"
+                            android:text="La llamarada"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/rbGio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="calcular_posada"
+                            android:text="Gio"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            />
+                </RadioGroup>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCostoPosada"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+
+            android:orientation="vertical"
+            app:layout_constraintHorizontal_bias="0."
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/linearLayoutCostoTransporte"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutPosada">
+
+        <TextView
+            android:id="@+id/tvCostoPosada"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+        </LinearLayout>
+
+
+             <LinearLayout
+                 android:id="@+id/linearLayoutRestaurante"
+                 android:layout_width="200dp"
+                 android:layout_height="100dp"
+                 android:layout_marginStart="0dp"
+                 android:layout_marginBottom="0dp"
+                 android:layout_marginTop="1dp"
+                 android:layout_marginEnd="1dp"
+
+                 android:orientation="vertical"
+                 app:layout_constraintHorizontal_bias="0."
+
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/linearLayoutCostoTransporte">
+
+                     <RadioGroup
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent">
+
+                             <RadioButton
+                                 android:id="@+id/rbLaCocoa"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:onClick="calcular_restaurante"
+                                 android:checked="true"
+                                 android:text="La Cocoa"
+                                 android:textStyle="bold"
+                                 android:textColor="@color/white"
+                                 />
+
+                             <RadioButton
+                                 android:id="@+id/rbDrBurguer"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="22dp"
+                                 android:onClick="calcular_restaurante"
+                                 android:text="Dr Burguer"
+                                 android:textStyle="bold"
+                                 android:textColor="@color/white"
+                                 />
+
+                             <RadioButton
+                                 android:id="@+id/rbElTahami"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:onClick="calcular_restaurante"
+                                 android:text="El Tahami"
+                                 android:textStyle="bold"
+                                 android:textColor="@color/white"
+                                 />
+                     </RadioGroup>
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:id="@+id/linearLayoutCostoRestaurante"
+                 android:layout_width="200dp"
+                 android:layout_height="25dp"
+                 android:layout_marginStart="0dp"
+                 android:layout_marginBottom="0dp"
+                 android:layout_marginTop="0dp"
+                 android:layout_marginEnd="0dp"
+
+                 android:orientation="vertical"
+                 app:layout_constraintHorizontal_bias="0."
+
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/linearLayoutRestaurante">
+
+                     <TextView
+                         android:id="@+id/tvcostoRestaurante"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:layout_weight="1"
+                         android:gravity="center"
+                         android:textSize="15dp"
+                         android:textStyle="bold"
+                         android:textColor="@color/white"
+                         />
+             </LinearLayout>
+
+
+
+        <LinearLayout
+                 android:id="@+id/linearLayoutVisita"
+                 android:layout_width="200dp"
+                 android:layout_height="100dp"
+                 android:layout_marginStart="0dp"
+                 android:layout_marginBottom="0dp"
+                 android:layout_marginTop="1dp"
+                 android:layout_marginEnd="1dp"
+
+                 android:orientation="vertical"
+                 app:layout_constraintHorizontal_bias="0."
+
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toEndOf="@id/linearLayoutRestaurante"
+                 app:layout_constraintTop_toBottomOf="@id/linearLayoutCostoPosada">
+     <RadioGroup
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+                     <RadioButton
+                         android:id="@+id/rbMuseoAbuelos"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:checked="true"
+                         android:onClick="calcular_visita"
+                         android:text="Museo Abuelos"
+                         android:textStyle="bold"
+
+                         android:textColor="@color/white"
+                         />
+
+                     <RadioButton
+                         android:id="@+id/rbMuseoJaramillo"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:onClick="calcular_visita"
+                         android:text="Museo Jaramillo"
+                         android:textStyle="bold"
+                         android:textColor="@color/white"
+                         />
+
+                     <RadioButton
+                       android:id="@+id/rbStaRita"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                         android:onClick="calcular_visita"
+                       android:text="Sta Rita"
+                         android:textStyle="bold"
+                         android:textColor="@color/white"
+                         />
+
+
+     </RadioGroup>
+
+             </LinearLayout>
+
+
+             <LinearLayout
+                 android:id="@+id/linearLayoutCostoVisita"
+                 android:layout_width="200dp"
+                 android:layout_height="25dp"
+                 android:layout_marginStart="0dp"
+                 android:layout_marginBottom="0dp"
+                 android:layout_marginTop="0dp"
+                 android:layout_marginEnd="0dp"
+
+                 android:orientation="vertical"
+                 app:layout_constraintHorizontal_bias="0."
+
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toEndOf="@id/linearLayoutCostoRestaurante"
+                 app:layout_constraintTop_toBottomOf="@id/linearLayoutVisita">
+
+                     <TextView
+                         android:id="@+id/tvCostoVisita"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:layout_weight="1"
+                         android:gravity="center"
+                         android:textSize="15dp"
+                         android:textStyle="bold"
+                         android:textColor="@color/white"
+                         />
+             </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutCostoTotal"
+                    android:layout_width="409dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="107dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutCostoRestaurante">
+
+                        <TextView
+                            android:id="@+id/tvTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Costo total del Viaje Es:"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="409dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutCostoTotal">
+
+                        <Button
+                            android:id="@+id/btcalcular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:onClick="calcular_total"
+
+                            android:drawableLeft="@drawable/calculadora"
+
+                            android:textSize="20dp"
+                            android:text="Calcular" />
+
+                        <Button
+                            android:id="@+id/btlimpiar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:onClick="limpiar_campos"
+                            android:drawableLeft="@drawable/limpiar"
+
+                            android:textSize="20dp"
+                            android:text="Limpiar" />
+                </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

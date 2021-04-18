@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TurismoSonson</string>
+    <string name="TextoBotonRestaurante">Restaurante</string>
+    <string name="TextoBotonPosada">Posada</string>
+    <string name="TextoBotonComoLlegar">Como Llegar</string>
+    <string name="TextoBotonAdrenalina">Adrenalina</string>
+    <string name="TextoBotonPaqueteTuristico">Paquete Turístico</string>
+    <string name="TextoBotonVisitar">Visitar</string>
+
+    <string name="nombreRestauranteDrBurguer">Dr Burguer</string>
+    <string name="nombreRestauranteElTesoro">El Tesoro</string>
+    <string name="nombreRestauranteLaLlamarada">La Llamarada</string>
+    <string name="nombreRestauranteLaCocoa">La Cocoa Restaurante</string>
+
+    <string name="precioRestauranteDrBurguerMain">9K - 30K</string>
+    <string name="infRestauranteDrBurguer">Comida Rapida - Grocery Store</string>
+
+    <string name="descripcionLaCocoaRestaurante">Los esperamos con los mejores platos y la mejor atención.Cumpleaños, despedidas y cenas familiares</string>
+    <string name="descripcionDrBurguerRestaurante">Burgers, cajas de papas, picadas, alitas, chuzos, maicitos...100% artesanales  </string>
+    <string name="descripcionElTesoroRestaurante">Buena experiencia, buen precio y muy buena comida. ¡Recomendados los frijoles! Son como los de la abuela! </string>
+    <string name="descripcionLaLlamaradaRestaurante">¡Variedad de platos! Si quieres celebrar el día de la madre o el padre. También atienden eventos por encargo, muy buena la atención, amplio y acogedor. </string>
+
+    <string name="descripcionElTesoroPosada">Nuestras habitaciones cuentan con una capacidad instalada para 65 personas aprox,  sus camas,  muchas de ellas torneadas y talladas en madera, evocan el encanto de una época</string>
+    <string name="descripcionHotelGioPosada">Hotel Gio es una casa tradicional de Sonsón Antioquia, que fue restaurada durante 5 años. La tradición es su valor fundamental.</string>
+    <string name="descripcionHotelTahamiPosada">Siempre bienvenidos al Hotel Tahami, ¡Su casa en Sonsón!.</string>
+
+    <string name="descripcionRutaStaMonicaVisita">El paisaje es encantador, son sus diferentes tonos de verde por los diversos cultivos de la zona, además de las historias que van contando los guias. Es un recorrido muy agradable y recomendado.</string>
+    <string name="descripcionMuseoJaramilloVisita">Museo de un reconocido pintor, muralista y ceramista está ubicado en el lugar que lo vio nacer, por eso hizo una importante donación de sus obras para crear este museo, un lugar donde se expresa el arte y la cultura.</string>
+    <string name="descripcionMuseoLosAbuelosVisita">Es un museo ubicado en el parque principal con valiosas obras y elementos de la un municipio antioqueño que con su agricultura y la calidez de su gente logró adquirir el valor y el reconocimiento, muy recomendado para visitar.</string>
+
+
+</resources>
